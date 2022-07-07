@@ -10,10 +10,35 @@ const typeDefs = gql`
         createdAt: String
         username: String
         commentCount: Int
+        comments : [Comment]
+    }
+
+    type Movie {
+        _id: ID
+        title: String
+        link: String
+    }
+
+    type User {
+        _id: ID
+        username: String
+        email: String
+        reviews: [Review]
+        savedMovies: [Movie]
+    }
+
+    type Comment {
+        _id: ID
+        commentText: String
+        createdAt: String
+        username: String
     }
 
     type Query {
-        reviews: [Review]
+        users: [User]
+        user(username: String!): User
+        reviews(username: String): [Review]
+        review(_id: ID!): Review
     }
 `;
 

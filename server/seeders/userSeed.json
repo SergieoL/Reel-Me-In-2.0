@@ -2,54 +2,63 @@
     {
         "username" : "movie.watcher.1",
         "email" : "moviewatcher1@gmail.com",
+        "password" : "tJzeZZghPa_trcS", 
         "reviews" : [],
         "savedMovies" : []
     },
     {
         "username" : "movie.watcher.2",
         "email" : "moviewatcher2@yahoo.com",
+        "password" : "tJzeZZghParcS", 
         "reviews" : [],
         "savedMovies" : []
     },
     {
         "username" : "movie.watcher.3",
         "email" : "moviewatcher3@gmail.com",
+        "password" : "zefwZZghPa_trcS", 
         "reviews" : [],
         "savedMovies" : []
     },
     {
         "username" : "movie.watcher.4",
         "email" : "moviewatcher4@hotmail.com",
+        "password" : "bdeZZghPa4fS", 
         "reviews" : [],
         "savedMovies" : []
     },
     {
         "username" : "movie.watcher.5",
         "email" : "moviewatcher5@aol.com",
+        "password" : "tJfwvgwsf_trcS", 
         "reviews" : [],
         "savedMovies" : []
     },
     {
         "username" : "movie.watcher.6",
         "email" : "moviewatcher6@gmail.com",
+        "password" : "fwvef42f1e2f8", 
         "reviews" : [],
         "savedMovies" : []
     },
     {
         "username" : "movie.watcher.7",
         "email" : "moviewatcher7@yahoo.com",
+        "password" : "ojniuhiu1515", 
         "reviews" : [],
         "savedMovies" : []
     },
     {
         "username" : "movie.watcher.8",
         "email" : "moviewatcher8@yahoo.com",
+        "password" : "892ghPa_trcS", 
         "reviews" : [],
         "savedMovies" : []
     },
     {
         "username" : "movie.watcher.9",
         "email" : "moviewatcher9@gmail.com",
+        "password" : "tJwwc15wdw", 
         "reviews" : [],
         "savedMovies" : []
     }

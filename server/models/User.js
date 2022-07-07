@@ -20,7 +20,7 @@ const userSchema = new Schema(
         password: {
             type: String,
             required: true,
-            minlength: 8
+            minlength: 6
         },
         reviews: [
             {
@@ -37,21 +37,25 @@ const userSchema = new Schema(
     }
 );
 
-// middleware to create password
+// set up middleware to create password
 userSchema.pre('save', async function(next) {
     if (this.isNew || this.isModified('password')) {
-        const saltRounds = 10;
-        this.password = await bcrypt.hash(this.password, saltRounds);
+      const saltRounds = 10;
+      this.password = await bcrypt.hash(this.password, saltRounds);
     }
-
+  
     next();
-});
-
-// compare new password with hashed password
-userSchema.methods.isCorrectPassword = async function(password) {
+  });
+  
+  // compare ths password with the hashed password
+  userSchema.methods.isCorrectPassword = async function(password) {
     return bcrypt.compare(password, this.password);
-};
-
-const User = model('User', userSchema);
-
-module.exports = User;
+  };
+  
+  userSchema.virtual('friendCount').get(function() {
+    return this.friends.length;
+  });
+  
+  const User = model('User', userSchema);
+  
+  module.exports = User;
