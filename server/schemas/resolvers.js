@@ -1,5 +1,8 @@
 const { User, Review } = require('../models');
 
+// error handling
+const { AuthenticationError } = require('apollo-server-express');
+
 const resolvers = {
     Query: {
         // query all reviews
@@ -25,6 +28,36 @@ const resolvers = {
                 .populate('reviews')
                 .populate('savedMovies');
             }
+    },
+
+    Mutation: {
+
+        // create user
+        addUser: async (parent, args) => {
+            const user = await User.create(args);
+
+            return user;
+        },
+
+        // login user
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
+
+            // check if user exist by email
+            if (!user) {
+                throw new AuthenticationError('Email not found.')
+            }
+
+            const correctPw = await user.isCorrectPassword(password);
+
+            // checks for correct password
+            if (!correctPw) {
+                throw new AuthenticationError('Incorrect password.')
+            }
+
+            return user;
+
+        }
     }
 };
 

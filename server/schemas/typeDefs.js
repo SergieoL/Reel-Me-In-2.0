@@ -40,6 +40,13 @@ const typeDefs = gql`
         reviews(username: String): [Review]
         review(_id: ID!): Review
     }
+
+    type Mutation {
+        login(email: String!, password: String!) : User
+        
+        addUser(username: String!, email: String!, password: String!) : User
+    }
+
 `;
 
 // export typeDefs
