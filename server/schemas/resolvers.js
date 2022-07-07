@@ -3,6 +3,9 @@ const { User, Review } = require('../models');
 // error handling
 const { AuthenticationError } = require('apollo-server-express');
 
+// import signToken() function
+const { signToken } = require('../utils/auth');
+
 const resolvers = {
     Query: {
         // query all reviews
@@ -35,8 +38,9 @@ const resolvers = {
         // create user
         addUser: async (parent, args) => {
             const user = await User.create(args);
+            const toke = signToken(user);
 
-            return user;
+            return { token, user };
         },
 
         // login user
@@ -55,7 +59,8 @@ const resolvers = {
                 throw new AuthenticationError('Incorrect password.')
             }
 
-            return user;
+            const token = signToken(user);
+            return { token, user };
 
         }
     }
