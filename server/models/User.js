@@ -1,6 +1,9 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
+// import movie schema
+const movieSchema = require('./Movie');
+
 const userSchema = new Schema(
     {
         username: {
@@ -25,12 +28,7 @@ const userSchema = new Schema(
                 ref: 'Review'
             }
         ],
-        savedMovies: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'Movie'
-            }
-        ]
+        savedMovies: [movieSchema]
     },
     {
         toJSON: {
