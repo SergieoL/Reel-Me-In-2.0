@@ -3,8 +3,17 @@ const { gql } = require('apollo-server-express');
 
 // create typeDefs
 const typeDefs = gql`
+
+    type Review {
+        _id: ID
+        reviewText: String
+        createdAt: String
+        username: String
+        commentCount: Int
+    }
+
     type Query {
-        helloWorld: String
+        reviews: [Review]
     }
 `;
 

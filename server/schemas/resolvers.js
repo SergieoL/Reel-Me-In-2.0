@@ -1,7 +1,9 @@
+const { User, Review } = require('../models');
+
 const resolvers = {
     Query: {
-        helloWorld: () => {
-            return 'Hello world!';
+        reviews: async () => {
+            return Review.find().sort({ createdAt: -1});
         }
     }
 };
