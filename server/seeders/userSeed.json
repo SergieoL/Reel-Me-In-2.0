@@ -1,0 +1,56 @@
+[
+    {
+        "username" : "movie.watcher.1",
+        "email" : "moviewatcher1@gmail.com",
+        "reviews" : [],
+        "savedMovies" : []
+    },
+    {
+        "username" : "movie.watcher.2",
+        "email" : "moviewatcher2@yahoo.com",
+        "reviews" : [],
+        "savedMovies" : []
+    },
+    {
+        "username" : "movie.watcher.3",
+        "email" : "moviewatcher3@gmail.com",
+        "reviews" : [],
+        "savedMovies" : []
+    },
+    {
+        "username" : "movie.watcher.4",
+        "email" : "moviewatcher4@hotmail.com",
+        "reviews" : [],
+        "savedMovies" : []
+    },
+    {
+        "username" : "movie.watcher.5",
+        "email" : "moviewatcher5@aol.com",
+        "reviews" : [],
+        "savedMovies" : []
+    },
+    {
+        "username" : "movie.watcher.6",
+        "email" : "moviewatcher6@gmail.com",
+        "reviews" : [],
+        "savedMovies" : []
+    },
+    {
+        "username" : "movie.watcher.7",
+        "email" : "moviewatcher7@yahoo.com",
+        "reviews" : [],
+        "savedMovies" : []
+    },
+    {
+        "username" : "movie.watcher.8",
+        "email" : "moviewatcher8@yahoo.com",
+        "reviews" : [],
+        "savedMovies" : []
+    },
+    {
+        "username" : "movie.watcher.9",
+        "email" : "moviewatcher9@gmail.com",
+        "reviews" : [],
+        "savedMovies" : []
+    }
+]
