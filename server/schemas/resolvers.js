@@ -8,6 +8,18 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
+        // get logged in user
+        me: async (parent, args, context) => {
+            if (context.user) {
+                const userData = await User.findOne({ _id: context.user._id })
+                    .select('-__v -password')
+                    .populate('reviews')
+                    .populate('savedMovies');
+        
+                return userData;
+            }
+            throw new AuthenticationError('You are not logged in.');
+        },     
         // query all reviews
         reviews: async (parent, { username }) => {
             const params = username ? { username } : {};
@@ -30,7 +42,8 @@ const resolvers = {
                 .select('-__v -password')
                 .populate('reviews')
                 .populate('savedMovies');
-            }
+        },
+
     },
 
     Mutation: {
