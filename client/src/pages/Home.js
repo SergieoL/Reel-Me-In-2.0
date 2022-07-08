@@ -21,6 +21,8 @@ const Home = () => {
         //JSX for homepage goes here
         //use eventhandlers to change between comment/review forms 
         //use Auth to check if user is logged in and adjust JSX accordingly 
-        <></>
+        <p>asdas</p>
     )
 };
+
+export default Home;
