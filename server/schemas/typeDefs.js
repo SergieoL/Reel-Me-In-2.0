@@ -48,11 +48,14 @@ const typeDefs = gql`
 
     type Mutation {
         login(email: String, password: String!): Auth
+
         addUser(username: String!, email: String!, password: String!): Auth
         addReview(reviewText: String!, reviewTitle: String!): Review
         addComment(reviewId: ID!, commentText: String!): Review
-        saveMovie(movieTitle: MovieInput): User
-        removeMovie(movieTitle: String!): User
+
+        saveMovie(input: MovieInput): User
+        
+        removeMovie(bookId: String!): User
 
     }
 
