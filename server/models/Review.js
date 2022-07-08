@@ -8,6 +8,10 @@ const reviewSchema = new Schema(
             require: 'You need to be logged in to write a review',
             maxlength: 300
         },
+        reviewTitle: {
+            type: String,
+            maxlength: 25
+        },
         createdAt: {
             type: Date,
             default: Date.now,
