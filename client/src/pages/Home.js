@@ -13,15 +13,15 @@ import CommentList from '../components/CommentList'
 
 const Home = () => {
     //use these to query and update homepage in JSX
- const { loading, data } = useQuery(QUERY_REVIEWS);
- const { data: userData } = useQuery(QUERY_ME_BASIC);
- const loggedIn = Auth.loggedIn();
+    const { loading, data } = useQuery(QUERY_REVIEWS);
+    const { data: userData } = useQuery(QUERY_ME_BASIC);
+    const loggedIn = Auth.loggedIn();
 
     return (
         //JSX for homepage goes here
         //use eventhandlers to change between comment/review forms 
         //use Auth to check if user is logged in and adjust JSX accordingly 
-        <p>asdas</p>
+        <p>Why is this not exported to App.js?</p>
     )
 };
 
