@@ -8,6 +8,7 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
+        //need to add movies resolver? 
         // get logged in user
         me: async (parent, args, context) => {
             if (context.user) {
