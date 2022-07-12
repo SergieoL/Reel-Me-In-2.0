@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const ReviewList = ({ reviews, title }) => {
     if (!reviews.length) {
@@ -15,12 +16,18 @@ const ReviewList = ({ reviews, title }) => {
                 <h4>{review.reviewTitle}</h4>
                 <p>{review.reviewText}</p>
                 <p className="">
-                {review.username}
-                review on {review.createdAt}
+                <Link
+                  to={`/profile{${review.username}}`}
+                  >
+                    {review.username}
+                </Link>
+                reviewed on {review.createdAt}
                 </p>
                 <p className="">
+                  <Link to={`/review/${review._id}`}>
                   Comments: {review.commentCount} || {' '}
-                  {review.reactionCount ? 'view' : 'comment'}
+                  {review.reactionCount ? 'view' : 'comment'}                    
+                  </Link>
                 </p>
               </div>
             </div>

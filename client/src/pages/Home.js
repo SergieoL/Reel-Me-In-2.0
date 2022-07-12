@@ -16,7 +16,7 @@ const Home = () => {
   // use these to query and update homepage in JSX
   const { loading, data } = useQuery(QUERY_REVIEWS);
   const reviews = data?.reviews || [];
-  console.log(reviews);
+  //console.log(reviews);
 
   // const { data: userData } = useQuery(QUERY_ME_BASIC);
   // const loggedIn = Auth.loggedIn();

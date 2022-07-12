@@ -5,6 +5,7 @@ export const QUERY_REVIEWS = gql`
     reviews(username: $username) {
       _id
       reviewText
+      reviewTitle
       createdAt
       username
       commentCount
@@ -17,3 +18,22 @@ export const QUERY_REVIEWS = gql`
     }
   }
 `;
+
+export const QUERY_REVIEW = gql`
+  query review($id: ID!) {
+    review(_id: $id) {
+      _id
+      reviewTitle
+      reviewText
+      createdAt
+      username
+      commentCount
+      comments {
+        _id
+        createdAt
+        username
+        commentText
+      }
+    }
+  }  
+`
