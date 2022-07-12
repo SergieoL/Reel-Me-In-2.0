@@ -29,6 +29,15 @@ const Signup = () => {
                   />
                 </div>
 
+                <div className="form-group">
+                    <label htmlFor="phone">
+                        <i className="zmdi zmdi-phone material-icons-name"></i>
+                  </label>
+                  <input type="phone" name="phone-in -talk" id="phone" autoComplete="off"
+                  placeholder="Your Phone"
+                  />
+                </div>
+
                 
 
 
