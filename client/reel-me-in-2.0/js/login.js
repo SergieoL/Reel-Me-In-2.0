@@ -28,6 +28,15 @@ const Login = () => {
                                 />
                             </div>    
 
+                            <div className="form-group">
+                                <label htmlFor="email"></label>
+                                    <i className="zmdi zmdi-email material-icons-name"></i>
+                                </label>
+                                <input type="email" name="email" id="email" autoComplete="off"
+                                    placeholder="Your Email"
+                                />
+                            </div>   
+
 
                     </div>
             </section>
