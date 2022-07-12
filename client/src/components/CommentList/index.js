@@ -9,11 +9,11 @@ const CommentList = ({ comments }) => {
             </div>
             <div className="">
                 {comments &&
-                    comments.map(comments => (
+                    comments.map(comment => (
                         <p className="" key={comment._id}>
-                            {comment.commentText} //{' '}
+                            {comment.commentText} || {' '}
                             <Link to={`profile/${comment.username}`}>
-                                {comment.username} {comment.createdAt}
+                                {comment.username}
                             </Link>
                         </p>
                     ))}

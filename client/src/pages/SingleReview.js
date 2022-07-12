@@ -18,6 +18,7 @@ const SingleReview = (props) => {
 
     const review = data?.review || {};
 
+
     if (loading) {
         return <div>Getting movie review!</div>;
     }
@@ -36,6 +37,9 @@ const SingleReview = (props) => {
                 reviewed on {review.createdAt}
                 </p>
             </div>
+            {review.commentCount > 0 && (
+                <CommentList comments={review.comments} />
+            )}
         </div>
     )
 }
