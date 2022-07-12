@@ -1,8 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Watchlist } from "./Componets/Watchlist";
-import { Watched } from "./Componets/Watched";
-import { Add } from "./Componets/Add";
 
 // import apollo to connect to db
 import {
@@ -24,7 +21,6 @@ import Profile from './pages/Profile';
 import SignUp from './pages/Signup';
 import NoMatch from './pages/NoMatch';
 import NewReview from './pages/NewReview';
-
 
 
 // create link to back-end db
