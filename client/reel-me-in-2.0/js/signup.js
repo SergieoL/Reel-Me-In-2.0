@@ -38,7 +38,17 @@ const Signup = () => {
                   />
                 </div>
 
+                <div className="form-group">
+                    <label htmlFor="work">
+                        <i className="zmdi zmdi-slideshow material-icons-name"></i>
+                  </label>
+                  <input type="text" name="work" id="work" autoComplete="off"
+                  placeholder="Your Profession"
+                  />
+                </div>
+
                 
+
 
 
                     </label>
