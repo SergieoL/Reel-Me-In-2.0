@@ -1,8 +1,6 @@
 import React from 'react';
-
 // import components
 import ReviewList from '../components/ReviewList';
-
 import { useQuery } from '@apollo/client';
 import { QUERY_REVIEWS } from '../utils/queries';
 //still need to write these components.

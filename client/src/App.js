@@ -70,6 +70,7 @@ function App() {
                 element={<NoMatch />}
               />
               </Routes>
+              <Footer />
           </div>
         </div>
       </Router>
