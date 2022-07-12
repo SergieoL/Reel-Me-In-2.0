@@ -37,3 +37,24 @@ export const QUERY_REVIEW = gql`
     }
   }  
 `
+
+export const QUERY_USER =gql`
+  query user($username: String!) {
+    user(username: $username) {
+      _id
+      username
+      email
+      savedMovies {
+        _id
+        title
+      }
+      reviews {
+        _id
+        reviewText
+        reviewTitle
+        createdAt
+        commentCount
+      }
+    }
+  }
+`
