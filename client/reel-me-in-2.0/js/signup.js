@@ -98,6 +98,15 @@ const Signup = () => {
                   />
                 </div>
               </form>
+
+              <div className="signup-image">
+                <figure>
+                  <img src={signpic} alt="registration pic" />
+                </figure>
+                <NavLink to="/login" className="signup-image-link">
+                  I am already registered
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>
