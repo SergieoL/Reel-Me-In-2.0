@@ -20,7 +20,16 @@ const Signup = () => {
                   />
                 </div>
 
-        
+                <div className="form-group">
+                    <label htmlFor="email">
+                        <i className="zmdi zmdi-email material-icons-name"></i>
+                  </label>
+                  <input type="email" name="email" id="email" autoComplete="off"
+                  placeholder="Your Email"
+                  />
+                </div>
+
+                
 
 
                     </label>
