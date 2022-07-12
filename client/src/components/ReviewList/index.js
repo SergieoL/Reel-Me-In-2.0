@@ -19,7 +19,7 @@ const ReviewList = ({ reviews, title }) => {
                 <Link
                   to={`/profile{${review.username}}`}
                   >
-                    {review.username}
+                    {review.username} 
                 </Link>
                 reviewed on {review.createdAt}
                 </p>
