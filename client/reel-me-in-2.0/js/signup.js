@@ -47,6 +47,15 @@ const Signup = () => {
                   />
                 </div>
 
+                <div className="form-group">
+                    <label htmlFor="password">
+                        <i className="zmdi zmdi-lock material-icons-name"></i>
+                  </label>
+                  <input type="password" name="password" id="password" autoComplete="off"
+                  placeholder="Your Password"
+                  />
+                </div>
+
                 
 
 
