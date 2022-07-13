@@ -12,6 +12,10 @@ const reviewSchema = new Schema(
             type: String,
             maxlength: 25
         },
+        movieTitle: {
+            type: String,
+            maxlength: 25
+        },
         createdAt: {
             type: Date,
             default: Date.now,

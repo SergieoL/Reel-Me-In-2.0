@@ -24,3 +24,8 @@ export const ADD_USER = gql`
   }
 `;
 
+export const ADD_REVIEW = gql`
+  mutation addReview($reviewText: String!, $reviewTitle: String!, $movieTitle) {
+    addReview(reviewText: $reviewText, $reviewTitle: String!, $movieTitle: String!)
+  }
+`
