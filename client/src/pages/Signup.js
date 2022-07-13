@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
+//imported from auth and mutations files
+import { useMutation } from '@apollo/client';
+import { ADD_USER } from '../utils/mutations';
+import Auth from '../utils/auth';
 
 
 const Signup = () => {
+
+
 
   return (
     <main className='flex-row justify-center mb-4'>
