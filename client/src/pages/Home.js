@@ -1,16 +1,16 @@
 import React from 'react';
+import Auth from '../utils/auth';
 // import components
 import ReviewList from '../components/ReviewList';
 import { useQuery } from '@apollo/client';
-import { QUERY_REVIEWS } from '../utils/queries';
+import { QUERY_REVIEWS, QUERY_ME } from '../utils/queries';
 //still need to write these components.
 // import WatchList from '../components/WatchList';
-// import ReviewForm from '../components/ReviewForm';
-// import CommentForm from '../components/CommentForm';
-// import CommentList from '../components/CommentList'
+
 
 const Home = () => {
   
+  const loggedIn = Auth.loggedIn();
   // use these to query and update homepage in JSX
   const { loading, data } = useQuery(QUERY_REVIEWS);
   const reviews = data?.reviews || [];

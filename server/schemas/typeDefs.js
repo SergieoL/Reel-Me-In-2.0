@@ -8,6 +8,7 @@ const typeDefs = gql`
         _id: ID
         reviewText: String
         reviewTitle: String
+        movieTitle: String
         createdAt: String
         username: String
         commentCount: Int
@@ -50,7 +51,7 @@ const typeDefs = gql`
         login(email: String, password: String!): Auth
 
         addUser(username: String!, email: String!, password: String!): Auth
-        addReview(reviewText: String!, reviewTitle: String!): Review
+        addReview(reviewText: String!, reviewTitle: String!, movieTitle: String!): Review
         addComment(reviewId: ID!, commentText: String!): Review
 
         saveMovie(input: MovieInput): User

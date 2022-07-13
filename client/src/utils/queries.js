@@ -58,3 +58,30 @@ export const QUERY_USER =gql`
     }
   }
 `
+
+export const QUERY_ME = gql`
+  {
+    me {
+      _id
+      username
+      email
+      reviews {
+        _id
+        reviewTitle
+        reviewText
+        createdAt
+        commentCount
+        comments {
+          _id
+          createdAt
+          commentText
+          username
+        }
+        savedMovies {
+          _id
+          title
+        }
+      }
+    }
+  }
+`
