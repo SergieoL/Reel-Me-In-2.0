@@ -5,7 +5,7 @@ import { ADD_REVIEW } from "../../utils/mutations";
 
 const ReviewForm = () => {
 
-    const [formState, setFormState] = useState({ movieTitle: '', reviewTitle: '', reviewText: ''})
+    const [formState, setFormState] = useState({ reviewText: '', reviewTitle: '', movieTitle: ''})
     const [addReview, { error }] = useMutation(ADD_REVIEW);
 
     const handleChange = event => {
@@ -27,6 +27,7 @@ const ReviewForm = () => {
             })
         } catch (e) {
             console.error(e);
+            console.log({...formState});
         }
 
     }

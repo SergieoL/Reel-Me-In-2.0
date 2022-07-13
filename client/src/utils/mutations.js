@@ -41,3 +41,18 @@ export const ADD_REVIEW = gql`
 
   }
 `
+
+export const ADD_COMMENT = gql`
+  mutation addComment($reviewId: ID!, $commentText: String!) {
+    addComment(reviewId: $reviewId, commentText: $commentText) {
+      _id
+      commentCount
+      comments {
+        _id
+        commentText
+        createdAt
+        username
+      }
+    }
+  }
+`;
