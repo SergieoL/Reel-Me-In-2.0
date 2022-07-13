@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import '../src/index.css';
+
 // import apollo to connect to db
 import {
   ApolloClient,
