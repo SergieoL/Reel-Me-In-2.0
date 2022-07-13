@@ -6,7 +6,9 @@ import Auth from '../utils/auth';
 
 
 const Signup = () => {
-
+  //will be used to set default state in form element
+  //imported from react
+  const [formState, setFormState] = useState({ username: '', email: '', password: '' });
 
 
   return (
