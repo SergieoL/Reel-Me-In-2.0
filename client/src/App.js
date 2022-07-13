@@ -18,7 +18,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import SingleReview from './pages/SingleReview';
 import Profile from './pages/Profile';
-import SignUp from './pages/Signup';
+import Signup from './pages/Signup';
 import NoMatch from './pages/NoMatch';
 import NewReview from './pages/NewReview';
 
@@ -51,7 +51,7 @@ function App() {
                 />
                 <Route
                   path="/signup"
-                  element={<SignUp />}
+                  element={<Signup />}
                 />
                 <Route path="/profile">
                   <Route path=":username" element={<Profile />} />
