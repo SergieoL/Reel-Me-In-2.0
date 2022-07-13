@@ -9,6 +9,31 @@ const Signup = () => {
   //will be used to set default state in form element
   //imported from react
   const [formState, setFormState] = useState({ username: '', email: '', password: '' });
+  //declaration for new user, using mutation resolver..
+  const [addUser, { error }] = useMutation(ADD_USER);
+  // State updates based on user input
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+// event handling
+  const handleFormSubmit = async event => {
+    event.preventDefault();
+    //checking for errors
+    try {
+      const { data } = await addUser({
+        variables: { ...formState }
+      });
+      //Authenticating
+      Auth.login(data.addUser.token);
+    } catch (e) {
+      console.error(e);
+    }
+
+  };
 
 
   return (
