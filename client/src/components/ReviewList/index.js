@@ -17,7 +17,7 @@ const ReviewList = ({ reviews, title }) => {
                 <p>{review.reviewText}</p>
                 <p className="">
                 <Link
-                  to={`/profile{${review.username}}`}
+                  to={`/profile/${review.username}`}
                   >
                     {review.username} 
                 </Link>

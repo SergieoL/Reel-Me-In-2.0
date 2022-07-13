@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 
+
 const Header = () => {
 
   // logout function
@@ -21,6 +22,7 @@ const Header = () => {
           {Auth.loggedIn() ? (
             <>
               <Link to="/profile">My Profile</Link>
+              <Link to='/newreview'>Create Review</Link>
               <a href='/' onClick={logout}>
                 Logout
               </a>
