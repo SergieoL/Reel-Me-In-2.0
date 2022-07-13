@@ -1,5 +1,6 @@
 import React from 'react';
 import loginpic from " ../images/login.svg";
+import { NavLink } from "react-router-dom";
 
 const Login = () => {
     return (
@@ -20,11 +21,11 @@ const Login = () => {
                         <form className="register-form" id="register-form">
 
                             <div className="form-group">
-                                <label htmlFor="name"></label>
-                                    <i className="zmdi zmdi-account material-icons-name"></i>
+                                <label htmlFor="email"></label>
+                                    <i className="zmdi zmdi-email material-icons-name"></i>
                                 </label>
-                                <input type="text" name="name" id="name" autoComplete="off"
-                                    placeholder="Your Name"
+                                <input type="email" name="email" id="email" autoComplete="off"
+                                    placeholder="Your Email"
                                 />
                             </div>    
 
@@ -32,11 +33,17 @@ const Login = () => {
                                 <label htmlFor="email"></label>
                                     <i className="zmdi zmdi-email material-icons-name"></i>
                                 </label>
-                                <input type="email" name="email" id="email" autoComplete="off"
-                                    placeholder="Your Email"
+                                <input type="password" name="password" id="password" autoComplete="off"
+                                    placeholder="Your Password"
                                 />
                             </div>   
 
+                            <div className="form-group form-button">
+                                <input type="submit" name="signin" id="signin" className="form-submit"
+                                    value="Log In"
+                                />
+                            </div>   
+                        </form>
 
                     </div>
             </section>
