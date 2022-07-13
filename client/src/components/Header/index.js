@@ -21,6 +21,7 @@ const Header = () => {
           {Auth.loggedIn() ? (
             <>
               <Link to="/profile">My Profile</Link>
+              <Link to='/newreview'>Create Review</Link>
               <a href='/' onClick={logout}>
                 Logout
               </a>
