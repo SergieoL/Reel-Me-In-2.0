@@ -19,7 +19,7 @@ const Signup = () => {
       [name]: value,
     });
   };
-// event handling
+// event handling 
   const handleFormSubmit = async event => {
     event.preventDefault();
     //checking for errors
@@ -42,13 +42,15 @@ const Signup = () => {
         <div className='card'>
           <h4 className='card-header'>Sign Up</h4>
           <div className='card-body'>
-            <form>
+            <form onSubmit={handleFormSubmit}>
               <input
                 className='form-input'
                 placeholder='Your username'
                 name='username'
                 type='username'
                 id='username'
+                value={formState.username}
+                onChange={handleChange}
               />
               <input
                 className='form-input'
@@ -56,6 +58,8 @@ const Signup = () => {
                 name='email'
                 type='email'
                 id='email'
+                value={formState.email}
+                onChange={handleChange}
               />
               <input
                 className='form-input'
@@ -63,10 +67,13 @@ const Signup = () => {
                 name='password'
                 type='password'
                 id='password'
+                value={formState.password}
+                onChange={handleChange}
               />
               <button className='btn d-block w-100' type='submit'>
                 Submit
               </button>
+              {error && <div>Sign up failed</div>}
             </form>
           </div>
         </div>
