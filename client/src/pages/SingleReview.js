@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 
 // import comment list and form
 import CommentList from '../components/CommentList';
-// import CommentForm from '../components/CommentForm';
+//import CommentForm from '../components/CommentForm';
 import { useQuery } from "@apollo/client";
 import { QUERY_REVIEW } from "../utils/queries";
+import CommentForm from "../components/CommentForm";
+import Auth from '../utils/auth';
 
 const SingleReview = (props) => {
     const { id: reviewId } = useParams();
@@ -40,6 +42,7 @@ const SingleReview = (props) => {
             {review.commentCount > 0 && (
                 <CommentList comments={review.comments} />
             )}
+            {Auth.loggedIn() && <CommentForm reviewId={review._id} />}
         </div>
     )
 }
