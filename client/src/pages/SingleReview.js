@@ -26,9 +26,9 @@ const SingleReview = (props) => {
     }
 
     return (
-        <div>
-            <div className="">
-                <h4>{review.reviewTitle}</h4>
+        <div className="bg-warning">
+            <div className="card border border-info bg-warning mx-2 p-2">
+                <h4 className="text-center">{review.reviewTitle}</h4>
                 <p>{review.reviewText}</p>
                 <p className="">
                 <Link

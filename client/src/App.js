@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import '../src/index.css';
+
 // import apollo to connect to db
 import {
   ApolloClient,
@@ -37,7 +39,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="">
+        <div className="bg-warning">
           <Header />
           <div className="">
           <Routes>

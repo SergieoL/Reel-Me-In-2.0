@@ -33,10 +33,13 @@ const ReviewForm = () => {
     }
 
     return (
-        <div>
-            <form className="" onSubmit={handleFormSubmit}>
+        <div className="row">
+            <div></div>
+        <div className="container col-3">
+            <form className="form bg-warning border border-danger p-4 m-2 text-center row" onSubmit={handleFormSubmit}>
+                <h5>Was it worth $10.50?</h5>
                 <input
-                    className='form-input'
+                    className='form-input my-3 col'
                     placeholder='Movie Title'
                     name='movieTitle'
                     type='text'
@@ -45,7 +48,7 @@ const ReviewForm = () => {
                     onChange={handleChange}
                 />
                 <input
-                    className='form-input'
+                    className='form-input my-3'
                     placeholder='Review Title'
                     name='reviewTitle'
                     type='text'
@@ -57,14 +60,16 @@ const ReviewForm = () => {
                     placeholder="Write an awesome review."
                     name="reviewText"
                     value={formState.reviewText}
-                    className=""
+                    className="my-3 p-3 form-input large-input"
                     onChange={handleChange}
                 ></textarea>
-                <button className="btn" type="submit">
+                <button className="btn btn-success" type="submit">
                     Post Review
                 </button>
                 {error && <p>Please check inputs and try again.</p>}
             </form>
+            <div></div>
+        </div>
         </div>
     )
 }

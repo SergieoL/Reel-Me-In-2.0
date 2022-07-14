@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const CommentList = ({ comments }) => {
     return (
-        <div className="">
-            <div className="">
-                <span className="">Comments</span>
+        <div className="border border-info m-2">
+            <div className="text-center">
+                <span className="h5">Comments</span>
             </div>
-            <div className="">
+            <div className="p-2">
                 {comments &&
                     comments.map(comment => (
                         <p className="" key={comment._id}>
