@@ -6,7 +6,7 @@ import { Watched } from "./Componets/Watched";
 import { Add } from "./Componets/Add";
 
 
-import { GlobalProvider } from "./context/GlobaalState";
+import { GlobalProvider } from "./context/GlobalState";
 
 function App() {
   return (
