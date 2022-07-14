@@ -29,16 +29,19 @@ const CommentForm = ({ reviewId }) => {
     }
 
     return (
-        <div>
-            <form className="" onSubmit={handleFormSubmit}>
+        <div className="container mb-2">
+            <form className="border border-info row" onSubmit={handleFormSubmit}>
+                <div className="col-3"></div>
                 <textarea
                     placeholder="Comment on this review"
                     value={commentText}
-                    className=""
+                    className="col-6 my-3"
                     onChange={handleChange}
                 ></textarea>
+                <div className="col-3"></div>
+                <div className="col-4"></div>
 
-                <button className="" type="submit">
+                <button className="btn btn-success col-4 mb-2" type="submit">
                     Add Comment
                 </button>
             </form>

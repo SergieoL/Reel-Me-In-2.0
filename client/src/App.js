@@ -39,7 +39,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="">
+        <div className="bg-warning">
           <Header />
           <div className="">
           <Routes>

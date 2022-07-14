@@ -22,7 +22,7 @@ const Profile = () => {
     }
   
     return (
-      <div className="card">
+      <div className="border border-info mx-2 mb-2 bg-warning">
         <div className="text-center">
           <h2 className="">
             {user.username}
@@ -30,7 +30,7 @@ const Profile = () => {
         </div>
   
         <div className="">
-          <div className="">
+          <div className="p-2 border border-info">
             <ReviewList reviews={user.reviews} title={`${user.username}'s reviews`} />
           </div>
         </div>
