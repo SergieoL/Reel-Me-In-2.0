@@ -22,8 +22,8 @@ const Profile = () => {
     }
   
     return (
-      <div>
-        <div className="">
+      <div className="card">
+        <div className="text-center">
           <h2 className="">
             {user.username}
           </h2>

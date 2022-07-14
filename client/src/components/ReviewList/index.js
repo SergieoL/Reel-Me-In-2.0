@@ -7,15 +7,15 @@ const ReviewList = ({ reviews, title }) => {
     }
   
     return (
-      <div>
+      <div className="m-4 bg-warning">
         <h3>{title}</h3>
         {reviews &&
           reviews.map(review => (
             <div key={review._id} className="">
-              <div className="">
+              <div className="border border-info p-3">
                 <h4>{review.reviewTitle}</h4>
                 <p>{review.reviewText}</p>
-                <p className="">
+                <p className="pt-4">
                 <Link
                   to={`/profile/${review.username}`}
                   >

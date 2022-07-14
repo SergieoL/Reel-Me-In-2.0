@@ -9,7 +9,7 @@ const NewReview = () => {
     const loggedIn = Auth.loggedIn();
 
     return(
-        <main>
+        <main bg-info>
             <div>
                 <ReviewForm />
             </div>
